@@ -18,8 +18,8 @@ public class GunUtils {
 		guns.add(new Colt45());
 		guns.add(new AK47());
 	}
-	
-	public List<	String> getGunNames() {
+
+	public List<String> getGunNames() {
 		List<String> gunNames = new ArrayList<String>();
 		for (Gun guns : guns) {
 			gunNames.add(guns.getGunName());
@@ -47,9 +47,10 @@ public class GunUtils {
 
 	public void shoot(Guns gun) {
 		Random random = new Random();
-
-		System.out.println("You have fired a " + gun.getGun().getGunName()
-				+ " it went " + random.nextInt(gun.getGun().getGunRange()) + " feet" + ".");
+		boolean hit = random.nextBoolean();
+		
+		System.out.println("You have fired a " + gun.getGun().getGunName() + " with the type " + gun.getGun().getGunType() 
+				+ " it " + (hit ? "hit".toUpperCase() : "didn't hit".toUpperCase()) + " the target.");
 	}
 
 }

@@ -8,7 +8,7 @@ public class GunGame {
 	public static void main(String[] args) {
 		GunUtils gun = new GunUtils();
 			
-		gun.shoot(Guns.COLT45);
+		gun.shoot(Guns.UZI);
 	}
 
 }
